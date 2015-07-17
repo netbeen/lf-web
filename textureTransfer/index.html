@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+  <TITLE>textureTransfer/index.html</TITLE>
+</HEAD>
+<BODY
+bgcolor="#ffffe0" text="#100000" vlink="#101030" link="#002040" alink="#008000">
+<TABLE border="0" cellspacing="8">
+  <TR>
+    <TD><IMG src="rug.png"> </TD>
+    <TD><IMG src="rug.png"> </TD>
+    <TD><IMG src="rug.png-gray"> </TD>
+  </TR>
+  <TR>
+    <TD><IMG src="AA027564.png"> </TD>
+    <TD><IMG src="AA027564.png-filtered.png"> </TD>
+    <TD><IMG src="AA027564.png-filtered-gray.png"> </TD>
+  <TR>
+    <TD><IMG src="output.png-color.png"> </TD>
+    <TD><IMG src="output.png-gray.png"> </TD>
+    <TD><IMG src="output.png-yiq.png"> </TD>
+  </TR>
+</TABLE>
+<BR>
+<H2> Parameters:</H2>
+<pre>
+--help --values annEpsilon: 1
+argFile: texture-transfer.txt
+ashLastLevel: false
+biasPenalty: 0
+cheesyBoundaries: true
+coherenceEps: 4
+coherencePow: 2
+createSrcLocHisto: false
+decayWeight: 0
+filterColorspace: RGB
+filterMM: (none!)
+filterModeMask: (none!)
+filterProcedure: Synthesize
+filteredExample: images/rug.png
+filteredFeatureType: Raw
+filteredPyramidType: Gaussian
+finalSourceFac: -1
+gainPenalty: 0
+heurAnnEpsilon: 1
+heurMaxTSVQDepth 7
+histogramEq: false
+levelWeighting: 1
+loadSourcesImage: false
+matchBtoA: false
+matchGrayHistogram: false
+matchMeanVariance: false
+maxTSVQDepth: 20
+maxTSVQError: 0
+modeMaskWeight: 0.01
+neighborhoodWidth: 5
+numHiddenNeurons: 20
+numLevels: 2
+numPasses: 1
+numTSVQBacktracks: 8
+onePixelSource: true
+oneway: false
+outputDirectory: textureTransfer
+outputPattern: summary%d.png
+outputStyle: Table
+pyramidHeight: 4
+pyramidType: Gaussian
+samplerEpsilon: 2
+savePointsFile: false
+searchMethod: ANN
+sourceColorspace: RGB
+srcExample: images/rug.png
+srcImage: images/AA027564.png
+srcWeight: 0.05
+targetMM: (none!)
+targetModeMask: (none!)
+useBias: false
+useFilter: true
+useFilterModeMask: false
+useGain: false
+useInterface: false
+useRandomStart: true
+useSigmoidalDecay: false
+useSplineWeights: true
+useTargetModeMask: false
+useYIQ: false
+
+</pre>
+<br>
+Elapsed time: 1176s
+</BODY>
+</HTML>

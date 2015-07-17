@@ -1,0 +1,22 @@
+useFilter: false
+
+
+srcExample: images/9.png
+filteredExample: images/9.png
+srcImage: images/9.png
+
+coherenceEps: 0
+useSplineWeights: false
+samplerEpsilon: 2
+numLevels: 1
+searchMethod: Ash
+
+
+
+matchMeanVariance: false
+
+useInterface: false
+
+
+outputDirectory: matAshikhmin
+outputStyle: Table

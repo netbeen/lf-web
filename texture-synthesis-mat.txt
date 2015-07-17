@@ -1,0 +1,18 @@
+useFilter: false
+
+
+srcExample: images/9.png
+filteredExample: images/9.png
+srcImage: images/9.png
+
+coherenceEps: 5
+useSplineWeights: true
+samplerEpsilon: 2
+
+matchMeanVariance: false
+
+useInterface: false
+
+
+outputDirectory: mat
+outputStyle: Table

@@ -1,0 +1,20 @@
+useFilter: true
+
+
+srcExample: images/rug.png
+filteredExample: images/rug.png
+srcImage: images/AA027564.png
+
+coherenceEps: 4
+useSplineWeights: true
+samplerEpsilon: 2
+srcWeight: 0.1
+onePixelSource: true
+
+matchMeanVariance: false
+
+useInterface: false
+
+
+outputDirectory: textureTransfer
+outputStyle: Table

@@ -1,0 +1,17 @@
+useFilter: false
+
+
+srcExample: images/14.png
+filteredExample: images/14.png
+srcImage: images/14.png
+
+coherenceEps: 5
+useSplineWeights: true
+samplerEpsilon: 2
+
+matchMeanVariance: false
+
+useInterface: false
+
+outputDirectory: flowers
+outputStyle: Table

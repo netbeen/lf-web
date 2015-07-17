@@ -1,0 +1,21 @@
+useFilter: false
+
+
+srcExample: images/9.png
+filteredExample: images/9.png
+srcImage: images/9.png
+
+coherenceEps: 0
+useSplineWeights: false
+samplerEpsilon: 2
+searchMethod: TSVQ
+neighborhoodWidth: 5
+
+
+matchMeanVariance: false
+
+useInterface: false
+
+
+outputDirectory: matWeiLevoy
+outputStyle: Table

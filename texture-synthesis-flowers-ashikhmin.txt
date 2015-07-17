@@ -1,0 +1,19 @@
+useFilter: false
+
+
+srcExample: images/14.png
+filteredExample: images/14.png
+srcImage: images/14.png
+
+coherenceEps: 0
+useSplineWeights: false
+samplerEpsilon: 2
+searchMethod: Ash
+numLevels: 1
+
+matchMeanVariance: false
+
+useInterface: false
+
+outputDirectory: flowersAshikhmin
+outputStyle: Table
