@@ -158,6 +158,7 @@ CMatrix<T>::transpose() const
 
 
 #ifdef LAPACK
+template<>
 inline CVector<double> 
 CMatrix<double>::symmetricEigenvalues()
 {
@@ -199,7 +200,7 @@ CMatrix<double>::symmetricEigenvalues()
   return CVector<double>(_rows,eigsfull);
 }
 
-
+template<>
 inline CVector<double> 
 CMatrix<double>::symmetricEigenvectors(CMatrix<double> & evecs,
 				      int maxVal, int minVal)
@@ -292,8 +293,8 @@ CMatrix<double>::symmetricEigenvectors(CMatrix<double> & evecs,
 }
 
 inline void
-linearRegression(const vector<Neigh*> & inputData,
-		 const vector<CVector<double>*> & targetData,
+linearRegression(const std::vector<Neigh*> & inputData,
+		 const std::vector<CVector<double>*> & targetData,
 		 CMatrix<double> & A,
 		 CVector<double> & B)
 {
@@ -304,14 +305,14 @@ linearRegression(const vector<Neigh*> & inputData,
   int tardim = targetData.front()->Length();
   int nlhs = indim + 1;
   
-  int ndat = max(max(npts,nlhs),tardim);
+  int ndat = std::max(std::max(npts,nlhs),tardim);
   int lwork = ndat*ndat;
 
   assert(A.columns() == indim);
   assert(A.rows() == tardim);
   assert(B.Length() == tardim);
 
-  int nsingvals = min(indim,tardim);
+  int nsingvals = std::min(indim,tardim);
 
   double * singvals = new double[nsingvals];
   double * work = new double[lwork];
@@ -433,6 +434,7 @@ T CMatrix<T>::sumsqr() const
 }
 
 #ifdef LAPACK
+template<>
 inline CMatrix<double> & CMatrix<double>::operator+=(const CMatrix & v)
 {
   assert(_rows == v._rows && _columns == v._columns);

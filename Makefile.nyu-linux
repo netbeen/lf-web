@@ -1,7 +1,10 @@
 GLUI = /usr
 
-CC = gcc
-CCC = g++
+#CC = gcc
+#CCC = g++
+
+CC = clang
+CCC = clang++
 
 #OPT_FLAGS = -g   # -I/usr/X11R6/include
 OPT_FLAGS = -O9 -DNDEBUG -funroll-loops  -march=x86-64

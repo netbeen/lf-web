@@ -16,15 +16,14 @@
 using namespace std;
 
 template<class T>
-class Sampler
-{
- private:
+class Sampler{
+private:
   multimap<float,T> _data;
   vector<unsigned int> _stats;
   float _epsilon;
   float _threshold;
   
- public:
+public:
   Sampler(float epsilon=.1) : _epsilon(epsilon), _threshold(-1) {}
   
   float epsilon() const { return _epsilon; }
@@ -32,7 +31,7 @@ class Sampler
   if (size() > 0) _threshold = BestSample().first*(1+_epsilon); }
   float threshold() const { return _threshold; }
 
-  void resetStats() { stats.erase(stats.begin(),stats.end()); }
+  void resetStats() { _stats.erase(_stats.begin(),_stats.end()); }
 
   void eraseSamples() { _data.erase(_data.begin(),_data.end()); _threshold=-1;}
   
@@ -88,7 +87,8 @@ class Sampler
       unsigned int zero = 0;
 
       // remove extra elements
-      multimap<float,T>::iterator it = _data.upper_bound(_threshold);
+      typename multimap<float,T>::iterator it;
+      it = _data.upper_bound(_threshold);
       if (it != _data.end())
 	_data.erase(it,_data.end());
       
@@ -123,7 +123,8 @@ class Sampler
   void print() const 
     {
       printf("samples: ");
-      for(multimap<float,T>::const_iterator it2=_data.begin(); it2 != _data.end(); ++it2)
+      typename multimap<float,T>::const_iterator it2;
+      for(it2=_data.begin(); it2 != _data.end(); ++it2)
 	printf("%f (%d %d)",(*it2).first,(*it2).second.x(), (*it2).second.y());
       printf("; epsilon = %f\n",_epsilon);
 

@@ -5,8 +5,8 @@
 
 class MLP;
 
-void linearRegression(const vector<Neigh*> & inputData,
-		      const vector<CVector<double>*> & targetData,
+void linearRegression(const std::vector<Neigh*> & inputData,
+		      const std::vector<CVector<double>*> & targetData,
 		      CMatrix<double> & A,
 		      CVector<double> & B);
 
