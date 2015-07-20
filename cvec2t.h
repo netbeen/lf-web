@@ -20,7 +20,7 @@ inline int max(int x, int y){ return x>=y?x:y;}
 template <class F> class CVec2T;
 
 template <class F>
-istream& operator>> ( istream& is, CVec2T<F>& v) {
+std::istream& operator>> ( std::istream& is, CVec2T<F>& v) {
   is >> v.v[0];
   is >> v.v[1];
   return is;
@@ -129,7 +129,7 @@ public:
   F l1( void ) const
     { F a = fabs( v[X] ); a += fabs( v[Y] ); return a; }
   F linfty( void ) const
-    { F a = fabs( v[X] ); a = ::max( a, F(abs( v[Y] )) );
+    { F a = fabs( v[X] ); a = std::max( a, F(abs( v[Y] )) );
       return  a; }
   F l2( void ) const { return sqrtf( dot() ); }
   
@@ -151,7 +151,7 @@ public:
 
 
 template <class F>
-ostream& operator<<( ostream& os, const CVec2T<F>& v) {
+std::ostream& operator<<( std::ostream& os, const CVec2T<F>& v) {
   return os << v(0) << " " << v(1);
 }
 
