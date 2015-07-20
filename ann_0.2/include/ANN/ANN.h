@@ -513,11 +513,11 @@ public:
 
     virtual void Print(			// print the tree (for debugging)
 	ANNbool with_pts,		// print points as well?
-	ostream &out);			// output stream
+	std::ostream &out);			// output stream
 
     virtual void Dump(			// dump entire tree
 	ANNbool with_pts,		// print points as well?
-	ostream &out);			// output stream
+	std::ostream &out);			// output stream
 };
 
 //----------------------------------------------------------------------
