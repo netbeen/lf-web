@@ -1,4 +1,4 @@
-INCLUDE = -I$(GLUTTOP)/include -I$(GLUI)/include -Iann_0.2/include
+INCLUDE = -I$(GLUTTOP)/include -I$(GLUI)/include/GL -Iann_0.2/include
 
 CSRCS = 
 CPPSRCS = BmpReader.cpp color.cpp lf.cpp MLP.cpp TSVQR.cpp \

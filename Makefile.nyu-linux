@@ -1,4 +1,4 @@
-GLUI = /home/hertzman/glui_v2beta_linux
+GLUI = /usr
 
 CC = gcc
 CCC = g++
