@@ -34,7 +34,7 @@
 
 void ANNbd_shrink::print(		// print shrinking node
 	int level,			// depth of node in tree
-	ostream &out)			// output stream
+	std::ostream &out)			// output stream
 {
     child[OUT]->print(level+1, out);		// print out-child
 
@@ -71,7 +71,7 @@ void ANNbd_shrink::print(		// print shrinking node
 //----------------------------------------------------------------------
 
 void ANNbd_shrink::dump(		// dump a shrinking node
-	ostream &out)			// output stream
+	std::ostream &out)			// output stream
 {
     out << "shrink " << n_bnds << "\n";
     for (int j = 0; j < n_bnds; j++) {

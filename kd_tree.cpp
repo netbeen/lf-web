@@ -59,7 +59,7 @@ ANNkd_leaf		*KD_TRIVIAL = NULL;	// trivial leaf node
 
 void ANNkd_split::print(		// print splitting node
 	int level,			// depth of node in tree
-	ostream &out)			// output stream
+	std::ostream &out)			// output stream
 {
     child[HI]->print(level+1, out);	// print high child
     out << "    ";
@@ -74,7 +74,7 @@ void ANNkd_split::print(		// print splitting node
 
 void ANNkd_leaf::print(			// print leaf node
 	int level,			// depth of node in tree
-	ostream &out)			// output stream
+	std::ostream &out)			// output stream
 {
 
     out << "    ";
@@ -96,7 +96,7 @@ void ANNkd_leaf::print(			// print leaf node
 
 void ANNkd_tree::Print(			// print entire tree
 	ANNbool with_pts,		// print points as well?
-	ostream &out)			// output stream
+	std::ostream &out)			// output stream
 {
     out << "ANN Version " << ANNversion << "\n";
     if (with_pts) {			// print point coordinates
@@ -143,7 +143,7 @@ void ANNkd_tree::Print(			// print entire tree
 //----------------------------------------------------------------------
 
 void ANNkd_split::dump(			// dump a splitting node
-	ostream &out)			// output stream
+	std::ostream &out)			// output stream
 {
     out << "split " << cut_dim << " " << cut_val << " ";
     out << cd_bnds[LO] << " " << cd_bnds[HI] << "\n";
@@ -154,7 +154,7 @@ void ANNkd_split::dump(			// dump a splitting node
 }
 
 void ANNkd_leaf::dump(			// dump a leaf node
-	ostream &out)			// output stream
+	std::ostream &out)			// output stream
 {
     if (this == KD_TRIVIAL) {		// canonical trivial leaf node
 	out << "leaf 0\n";		// leaf no points
@@ -170,7 +170,7 @@ void ANNkd_leaf::dump(			// dump a leaf node
 
 void ANNkd_tree::Dump(			// dump entire tree
 	ANNbool with_pts,		// print points as well?
-	ostream &out)			// output stream
+	std::ostream &out)			// output stream
 {
     out << "#ANN " << ANNversion << "\n";
     if (with_pts) {			// print point coordinates

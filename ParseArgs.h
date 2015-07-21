@@ -44,8 +44,8 @@ public:
   enum { MAX_NAME_LENGTH = 100 };
 
   void Dump( FILE *fp = stderr, bool dumpType = true );
-  void DumpArgumentsHTML( ofstream &out );
-  void DumpValuesHTML( ofstream &out );
+  void DumpArgumentsHTML( std::ofstream &out );
+  void DumpValuesHTML( std::ofstream &out );
 
 protected:
 

@@ -31,7 +31,8 @@
 #ifndef ANNx_H
 #define ANNx_H
 
-#include <iomanip.h>			// I/O manipulators
+//#include <iomanip.h>			// I/O manipulators
+#include <iomanip>
 #include <ANN/ANN.h>			// ANN includes
 
 //----------------------------------------------------------------------
@@ -80,7 +81,7 @@ void annError(			// ANN error routine
 void annPrintPt(		// print a point
     ANNpoint		pt,		// the point
     int			dim,		// the dimension
-    ostream		&out);		// output stream
+    std::ostream		&out);		// output stream
 
 //----------------------------------------------------------------------
 //  Orthogonal (axis aligned) rectangle

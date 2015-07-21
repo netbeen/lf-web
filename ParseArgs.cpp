@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include "ParseArgs.h"
 #include "compat.h"
+#include <cstring>
 
+using std::pair;
+using std::endl;
+using std::ofstream;
 
 void ParseArgs::ParseInput( int argc, char *argv[] )
 {
@@ -23,7 +27,7 @@ void ParseArgs::ParseInput( char *filename )
   const int BUFLEN = 2048;
   char buffer[ BUFLEN+1 ];
   std::string name;
-  ifstream inFile( filename );
+  std::ifstream inFile( filename );
 
   while( !inFile.eof() )
   {
@@ -34,7 +38,7 @@ void ParseArgs::ParseInput( char *filename )
     if( buffer[0] == '#' )
       continue;
 
-    istrstream lineStream( buffer );
+    std::istrstream lineStream( buffer );
     while( lineStream >> name )
       m_inputParams.push_back( name );
   }
@@ -302,7 +306,7 @@ void ParseArgs::Dump( FILE *outFile, bool dumpType )
 
   while( mapIter != m_paramDict.end() )
   {
-    pair<std::string, ParamInfo> item = *mapIter;
+    std::pair<std::string, ParamInfo> item = *mapIter;
     ParamInfo &info = item.second;
 
     // icky hack...
@@ -372,7 +376,7 @@ void ParseArgs::Dump( FILE *outFile, bool dumpType )
       std::map< std::string, int, std::less<std::string> >::iterator enumIter = info.enumMap.begin();
       while( enumIter != info.enumMap.end() )
       {
-	pair<std::string, int> enumItem = *enumIter;
+	std::pair<std::string, int> enumItem = *enumIter;
 	fprintf( outFile, "\t%s\n", enumItem.first.c_str() );
 
 	enumIter++;
@@ -383,15 +387,15 @@ void ParseArgs::Dump( FILE *outFile, bool dumpType )
   }
 }
 
-void ParseArgs::DumpArgumentsHTML( ofstream &out )
+void ParseArgs::DumpArgumentsHTML( std::ofstream &out )
 {
   std::map< std::string, ParamInfo, std::less<std::string> >::iterator mapIter = m_paramDict.begin();
 
-  out << "<pre>" << endl << endl;
+  out << "<pre>" << std::endl << std::endl;
 
   while( mapIter != m_paramDict.end() )
   {
-    pair<std::string, ParamInfo> item = *mapIter;
+    std::pair<std::string, ParamInfo> item = *mapIter;
     ParamInfo &info = item.second;
     out << item.first;
 

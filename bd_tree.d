@@ -1,4 +1,4 @@
-kd_tree.o: kd_tree.cpp kd_tree.h ann_0.2/include/ANN/ANNx.h \
+bd_tree.o: bd_tree.cpp bd_tree.h ann_0.2/include/ANN/ANNx.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/iomanip \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/x86_64-linux-gnu/c++/4.9/bits/c++config.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/x86_64-linux-gnu/c++/4.9/bits/os_defines.h \
@@ -136,5 +136,5 @@ kd_tree.o: kd_tree.cpp kd_tree.h ann_0.2/include/ANN/ANNx.h \
   /usr/include/x86_64-linux-gnu/bits/mathdef.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathinline.h \
-  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.0/include/float.h kd_split.h \
-  kd_util.h ann_0.2/include/ANN/ANNperf.h
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.0/include/float.h kd_tree.h \
+  kd_util.h kd_split.h ann_0.2/include/ANN/ANNperf.h
