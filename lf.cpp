@@ -2185,7 +2185,7 @@ void SetupArgParser( ParseArgs &parser )
 
 /**************************************** main() ********************/
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
   // this is necessary if we're profiling on windows. 
   // #define PROFILING_WINDOWS

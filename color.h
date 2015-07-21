@@ -383,7 +383,7 @@ void XYZtoLuv( PixType X, PixType Y, PixType Z,
   PixType vnPrime = 9*Yn / (Xn + 15*Yn + 3*Zn);
 
   // this is for Y/Yn > 0.008856
-  L = max( (PixType)0.0, (PixType)(116*pow(Y/Yn, 1.0/3.0) - 16));
+  L = std::max( (PixType)0.0, (PixType)(116*pow(Y/Yn, 1.0/3.0) - 16));
 
   // the following are for X/Xn, Y/Yn, Z/Zn > 0.01
   u = 13*L*(uPrime-unPrime);
@@ -434,7 +434,7 @@ void XYZtoLab( PixType X, PixType Y, PixType Z,
   PixType Zn = 108.8754;
 
   // this is only valid if Y/Yn > 0.008856
-  L = max( (PixType)0.0, (PixType)(116*pow(Y/Yn, 1.0/3.0) - 16) );
+  L = std::max( (PixType)0.0, (PixType)(116*pow(Y/Yn, 1.0/3.0) - 16) );
   
   // the following are really only valid for X/Xn, Y/Yn, Z/Zn > 0.01
   a = 500*(pow(X/Xn, 1.0/3.0) - pow(Y/Yn, 1.0/3.0));

@@ -218,7 +218,7 @@ template <class PointN>
 PointN TSVQ<PointN>::centroid(const vector<PointN*> & pts)
 {
   assert(!pts.empty());
-  vector<PointN*>::const_iterator it = pts.begin();
+  typename vector<PointN*>::const_iterator it = pts.begin();
   PointN c = (**it);
   /*
   return c;
@@ -251,7 +251,7 @@ template <class PointN>
 PointN TSVQ<PointN>::stdev(const vector<PointN*> & pts, const PointN & mean)
 {
   assert(!pts.empty());
-  vector<PointN*>::const_iterator it = pts.begin();
+  typename vector<PointN*>::const_iterator it = pts.begin();
   PointN v = sqr(**it - mean);
   for(++it; it != pts.end(); ++it)
     v = v + sqr(**it - mean);

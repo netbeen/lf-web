@@ -1,4 +1,5 @@
 #include "my_lapack.h"
+#include <cstring>
 
 static const int i_one = 1;
 
