@@ -24,6 +24,7 @@ TSVQR.o: TSVQR.cpp TSVQ.h /usr/include/math.h /usr/include/features.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_pair.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/move.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/concept_check.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/type_traits \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_iterator_base_types.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_iterator_base_funcs.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/debug/debug.h \
@@ -36,12 +37,18 @@ TSVQR.o: TSVQR.cpp TSVQ.h /usr/include/math.h /usr/include/features.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/new \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/exception \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/atomic_lockfree_defines.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/exception_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/nested_exception.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/memoryfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_construct.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/ext/alloc_traits.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/alloc_traits.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_uninitialized.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_vector.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/initializer_list \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_bvector.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/functional_hash.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/hash_bytes.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/range_access.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/vector.tcc \
   CMatrix.h CVector.h /usr/include/stdio.h \
@@ -62,6 +69,10 @@ TSVQR.o: TSVQR.cpp TSVQ.h /usr/include/math.h /usr/include/features.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/cwchar \
   /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/xlocale.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/char_traits.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/cstdint \
+  /usr/lib/llvm-3.6/bin/../lib/clang/3.6.0/include/stdint.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h \
+  /usr/include/stdint.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/localefwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/x86_64-linux-gnu/c++/4.9/bits/c++locale.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/clocale \
@@ -89,6 +100,22 @@ TSVQR.o: TSVQR.cpp TSVQ.h /usr/include/math.h /usr/include/features.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_function.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/backward/binders.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/basic_string.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/ext/string_conversions.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/cstdlib \
+  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/sigset.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/cstdio \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/cerrno \
+  /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/basic_string.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/locale_classes.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/streambuf \
@@ -107,7 +134,6 @@ TSVQR.o: TSVQR.cpp TSVQ.h /usr/include/math.h /usr/include/features.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/istream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/fstream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/codecvt.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/cstdio \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/x86_64-linux-gnu/c++/4.9/bits/basic_file.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/x86_64-linux-gnu/c++/4.9/bits/c++io.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/fstream.tcc \
@@ -123,16 +149,16 @@ TSVQR.o: TSVQR.cpp TSVQ.h /usr/include/math.h /usr/include/features.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/lib/llvm-3.6/bin/../lib/clang/3.6.0/include/float.h \
-  ann_0.2/include/ANN/ANN.h /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/sigset.h \
-  /usr/include/x86_64-linux-gnu/sys/sysmacros.h /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h CVectorInline.h \
-  my_lapack.h \
+  ann_0.2/include/ANN/ANN.h CVectorInline.h my_lapack.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/cstring \
-  /usr/include/string.h CMatrixInline.h sampler.h TSVQInline.h TSVQR.h
+  /usr/include/string.h CMatrixInline.h sampler.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/map \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_tree.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/ext/aligned_buffer.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_map.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/tuple \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/array \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/stdexcept \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/uses_allocator.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/4.9/../../../../include/c++/4.9/bits/stl_multimap.h \
+  TSVQInline.h TSVQR.h

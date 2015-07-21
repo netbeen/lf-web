@@ -2,6 +2,7 @@
 #define __SAMPLER_H__
 
 #include <vector>
+#include <map>
 
 #ifndef _WIN32
 //#include <multimap>
@@ -18,7 +19,7 @@ using namespace std;
 template<class T>
 class Sampler{
 private:
-  multimap<float,T> _data;
+  std::multimap<float,T> _data;
   vector<unsigned int> _stats;
   float _epsilon;
   float _threshold;
